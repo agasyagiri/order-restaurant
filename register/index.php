@@ -33,7 +33,7 @@
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-5 mt-md-4 pb-5">
-            <form action="/register" method="post">
+            <form action="../api/register.php" method="post">
 
               <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
               <p class="text-white-50 mb-5">Please enter your credentials</p>
@@ -43,7 +43,7 @@
                 <label class="form-label" for="typeEmailX">Email</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="email" name="name" id="typeNamelX" class="form-control form-control-lg" />
+                <input type="text" name="name" id="typeNamelX" class="form-control form-control-lg" />
                 <label class="form-label" for="typeNameX">Nama</label>
               </div>
 
@@ -63,7 +63,6 @@
               <p class="mb-0">Do you have an account? <a href="../login" class="text-white-50 fw-bold">Login</a>
               </p>
             </div>
-
           </div>
         </div>
       </div>
@@ -72,15 +71,15 @@
 </section>
 <style>
   .gradient-custom {
-/* fallback for old browsers */
-background: #6a11cb;
+  /* fallback for old browsers */
+  background: #6a11cb;
 
-/* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
 
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-}
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
 </style>
   <!-- MDB -->
 <script
@@ -90,16 +89,3 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 </body>
 
 </html>
-
-<!-- <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  include "../database.php";
-  // collect value of input field
-  $email = $_POST['email'];
-  $name = $_POST['name'];
-  $password = $_POST['password'];
-    
-  $conn -> query("INSERT INTO user VALUES ('','".$name."','".$email."','".$password."';")
-}
-
-?> -->
