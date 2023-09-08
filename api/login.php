@@ -19,8 +19,10 @@ if ($_POST) {
     $encryption_key, $options, $encryption_iv);
     if ($decryption == $password){
       $_SESSION["user"]["email"]=$email;
+      $_SESSION["user"]["username"]=$result[1];
       $_SESSION["user"]["role"]=$result[4];
-      header("Location: ../");
+      if ($result[4] == "Admin") header("Location: ../admin");
+      else header("Location: ../");
     } else header("Location: ../login");
   } else {
     header("Location: ../login");
