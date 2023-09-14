@@ -14,7 +14,7 @@ if ($_POST) {
               $encryption_key, $options, $encryption_iv);
     
   $result = mysqli_query($conn, "INSERT INTO `user` ( `email`, `name`, `password` ) values('".$email."', '".$name."', '".$encryption."') ");
-  header("Location: ../login");
+  header("Location: /login");
   die();
 }
 ?>
