@@ -22,7 +22,7 @@ if ($_POST) {
       $_SESSION["user"]["username"]=$result[1];
       $_SESSION["user"]["role"]=$result[4];
       if ($result[4] == "Admin") header("Location: ../admin");
-      else header("Location: ../");
+      else header("Location: ../dasboard");
     } else header("Location: ../login");
   } else {
     header("Location: ../login");
