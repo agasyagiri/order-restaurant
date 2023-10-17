@@ -1,6 +1,6 @@
 <?php
 include "../authentication.php";
-if ($role != "Admin") return header("Location: ../");
+if ($role != "Admin") return header("Location: /");
 include "components/head.php";
 ?>
 
