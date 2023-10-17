@@ -1,15 +1,17 @@
 <?php
-include "../authentication.php";
-if ($role != "Admin") return header("Location: ../login");
-include "components/head.php";
+include "../../../authentication.php";
+if ($role != "Admin") return header("Location: /");
+include "../../components/head.php";
 ?>
-
 <body>
     <div class="dashboard-main-wrapper">
-        <?php include "components/navbar.php";
-        include "components/sidebar.php";
+        <?php include "../../components/navbar.php";
+        include "../../components/sidebar.php";
         ?>
-<div class="row">
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content">
+                    <div class="row">
                     <!-- ============================================================== -->
                     <!-- data table  -->
                     <!-- ============================================================== -->
@@ -509,5 +511,8 @@ include "components/head.php";
                     <!-- end data table  -->
                     <!-- ============================================================== -->
                 </div>
-<?php include "components/footer.php"?>
+            </div>
+        </div>
+<?php include "../../components/footer.php"?>
+
 
